@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Pond HTML Template Documentation</title>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+</head>
+
+<body>
+<div id="page">
+
+	<div class="wrapper clearfix">
+	
+    	<div id="sidebar" class="right_float">
+        	<h3><strong>Table of Contents</strong></h3>
+            
+            <ul id="mainnav">
+				<li><a href="#preface"><strong>Preface</strong></a></li>
+            	<li><a href="#generalrules" class="important"><strong>General Css Elements</strong></a></li>
+            	<li><a href="#htmlstructure"><strong>HTML Structure</strong></a></li>
+            	<li><a href="#border"><strong>Border (Viewport)</strong></a></li>
+            	<li><a href="#titles"><strong>Headings (Titles)</strong></a></li>
+            	<li><a href="#sections"><strong>Sections</strong></a></li>
+            	<li><a href="#page-title"><strong>Page Title</strong></a></li>
+            	<li><a href="#split-sections" class="important"><strong>Split Sections</strong></a></li>
+            	<li><a href="#fonts"><strong>Fonts</strong></a></li>
+            	<li><a href="#preloader"><strong>Preloader / Pagelaoder</strong></a></li>
+            	<li><a href="#header"><strong>Header</strong></a></li>
+            	<li><a href="#logo"><strong>Change Logo</strong></a></li>
+            	<li><a href="#menu"><strong>Menu / Navigation</strong></a></li>
+            	<li><a href="#slider"><strong>Slider / Carousel</strong></a></li>
+            	<li><a href="#masonry"><strong>Masonry (Portfolio / Blog layout)</strong></a></li>
+            	<li><a href="#bgvideo"><strong>Background Video</strong></a></li>
+            	<li><a href="#parallax"><strong>Parallax Background</strong></a></li>
+            	<li><a href="#contact"><strong>Contact Form</strong></a></li>
+            	<li><a href="#map"><strong>Google Map</strong></a></li>
+            	<li><a href="#video-audio"><strong>Selfhosted Audio/Video</strong></a></li>
+            	<li><a href="#elements"><strong>Elements / Shortcodes</strong></a></li>
+            	<li><a href="#retina"><strong>Retina</strong></a></li>
+            	<li><a href="#css"><strong>Css Files</strong></a></li>
+            	<li><a href="#javascript"><strong>Javascript</strong></a></li>
+            	<li><a href="#ressources"><strong>Ressources</strong></a></li>
+            </ul>
+        </div>
+    
+    
+        <div id="content" class="left_float">
+        	<h1><strong>Pond HTML Template Documentation</strong></h1>
+            
+           
+            
+            
+          <div id="introduction" class="section">
+           	<h4 class="sectiontitle"><strong>Introduction</strong></h4>
+            	<p>
+            	You bought an HTML / CSS template, so you need some basic knowledge for those 2 languages.  The Best way is to play around with the different elements/sections but you find some helpfull tips and explanations how this template is build up and works. <br>
+				<b>Please compare all the explanation from this documentation with the original files to have a better understanding.</b>
+            	</p>
+          </div>
+		  
+		  <div id="tutorials" class="section">
+            	<h4 class="sectiontitle"><strong>Video Tutorials</strong></h4>
+					<p>
+						Take a look at the video tutorials.
+					</p>
+                	<ul>
+						<li><a href="http://www.youtube.com/watch?v=Ue_JTSc7Mpk" target="_blank"><strong>Border Options</strong></a></li>
+						<li><a href="http://www.youtube.com/watch?v=Qdb1Y_Tj8mY" target="_blank"><strong>Header Options</strong></a></li>
+						<li><a href="http://www.youtube.com/watch?v=WwLSv7RFCbs" target="_blank"><strong>Portfolio/Blog Options</strong></a></li>
+					</ul>
+            </div>
+          
+          <div id="generalrules" class="section">
+           	<h4 class="sectiontitle"><strong>General Css Elements</strong></h4>
+            	<p>
+            	These are general classes, id's or tags which you will find frequently in almost all html files.
+            	</p>
+            	<p><strong>#page-content:</strong> you will find this element on every page. It contains all main content (header,maincontent,footer)</p>
+				<p><strong>.wrapper:</strong> it wrapps the element to a the main content width. (1080px = default / 900px for smaller screens / 730px for tablet (portrait) / 260px for phones).</p>
+				<p><strong>.wrapper-small:</strong> same use than .wrapper but with smaller sizes. (780px = default / 660px for smaller screens / 550px for tablet (portrait) / 260px for phones).</p>
+            	<p><strong>.left-float:</strong> use this classname for any element you want to float to the left.</p>
+            	<p><strong>.right-float:</strong> use this classname for any element you want to float to the right.</p>
+            	<p><strong>.clearfix:</strong> for all elements which contains any floating element.</p>
+            	<p><strong>.align-center:</strong> use this class if you want to align the text for a whole section or just an element.</p>
+            	<p><strong>.text-light:</strong> this class is needed if you use a darker background for a section (for example a dark parallax section)</p>
+            	<p class="attention"><strong class="red">.full-height:</strong> this class is used for elements which should take the whole viewport height as mainly used on the page-title section in portfolio-single.html for example.</p>
+            	<p class="attention"><strong class="red">.transition:</strong> this class is only for anchor tags.  It will do a smooth transistion when leaving the page.<br>You can see for example that it has been used for the portfolio / blog links.</p>
+		</div>
+          
+		<div id="htmlstructure" class="section">
+			<h4 class="sectiontitle"><strong>HTML Structure</strong></h4>
+		   	<p>
+			For a <b>One Page</b> file you need to respect some structure.  Here's a basic structure example.
+			</p>
+<p><pre>
+...
+&lt;div id="page-content"&gt;
+
+ &lt;header&gt;
+ &lt;/header&gt;
+	
+ &lt;div class="page-body"&gt;
+  &lt;section id="about"&gt;
+   &lt;div class="section-inner"&gt;
+    CONTENT FOR ABOUT SECTION GOES HERE
+   &lt;/div&gt;
+  &lt;/section&gt; 
+		
+  &lt;section id="services"&gt;
+   &lt;div class="section-inner"&gt;
+    CONTENT FOR SERVICES SECTION GOES HERE
+   &lt;/div&gt;
+  &lt;/section&gt; 
+ &lt;/div&gt;
+	
+ &lt;footer&gt;
+ &lt;/footer&gt;
+	
+&lt;/div&gt;
+...
+</pre></p>
+		<p>
+		You can choose custom id names for the different "sections".  
+		Just make sure that the same name is used for the navigation and that they are unique.  When clicking on the menu item it will scroll to the asigned section.
+		</p>
+		</div>
+		  
+		  
+		<div id="border" class="section">
+			<h4 class="sectiontitle"><strong>Border (Viewport)</strong></h4>
+			<p>
+				One unique feature of the template is the viewport border.  By default it is added to all html files but you can remove it or use a bigger border.
+			</p>
+			<br><br>
+			<h5><strong>Remove border</strong></h5>
+			<p>Just delete the class 'bordered' on the body tag and the border elements.</p>
+			<p><pre>
+&lt;body class="bordered"> 
+
+&lt;!-- BORDERS (Don't want any border? Delete the class bordered on the body and this part) -->
+&lt;div id="bodyborder-left">&lt;/div>
+&lt;div id="bodyborder-right">&lt;/div>
+&lt;div id="bodyborder-top">&lt;/div>
+&lt;div id="bodyborder-bottom">&lt;/div>
+&lt;!-- BORDERS -->
+</pre></p>
+			<br><br>
+			<h5><strong>Bigger border</strong></h5>
+			 <p>The default border has a width of 40px.  You can increase this border to 60px by just adding the class 'big-border' to the body tag.</p>
+			 <p><pre>
+&lt;body class="bordered <strong>big-border</strong>"> 
+</pre></p>dsqdsq
+				<a href="http://www.youtube.com/watch?v=Ue_JTSc7Mpk" target="_blank" class="video-tutorial"><span class="icon"></span><span class="text">Video Tutorial</span></a>
+		</div>
+		  
+		  
+		<div id="title" class="section">
+			<h4 class="sectiontitle"><strong>Headings (Titles)</strong></h4>
+			<p>
+				By default the headings (h1,h2,h3,h4,h5,h6) Uses the main heading font "Montserrat" and have a top margin.<br>
+				But you have the possibilities to add some classes to your headings.
+			</p>
+			<ul>
+				<li><strong>alttitle</strong> (will use a different font "Lato" and a smaller top margin)</li>
+				<li><strong>title-minimal</strong> (uppercase and letter-spacing are added)</li>
+				<li><strong>title-ultraminimal</strong> (uppercase and a bigger letter-spacing are added)</li>
+			</ul>
+			<p><pre>
+&lt;h3 class="alttitle title-minimal"&gt;...&lt;/h3>
+</pre></p>
+			<br>
+			<p>
+			Another heading feature is the <strong>data-bigletter</strong>.  Use this data attribute if you want to add a big letter in the background of the heading.
+			</p>
+			<p><pre>
+&lt;h2 data-bigletter="A">&lt;strong>About&lt;/strong>&lt;/h2>
+</pre></p>
+		</div>
+		  
+		  
+		<div id="sections" class="section">
+			<h4 class="sectiontitle"><strong>Sections</strong></h4>
+			<p>
+				A  <em>&lt;section id="MENUITEM"></em> should always be related to a menu item!  Thanks to this, the menu item knows where to scroll when it is clicked.
+			</p>
+			<p>
+				As you've seen above a section is always followed by a "section-inner". This is a <b>must</b>!  You can optionally add the class <b>wrapper</b> the the section-inner if you know that this section will not contain any other element which will be fullwidth.<br>
+				<i>In the index.html, no section does this, because all of them have a fullwidth element such as parallax or split section. For all other sections there has been added an additional div tag with the wrapper class (See example below).</i> 
+			</p>
+<p><pre>
+...
+<strong>&lt;section id="about"&gt;
+ &lt;div class="section-inner"&gt;</strong>
+		
+  &lt;div class="wrapper"&gt;
+  
+   &lt;div class="main-title align-center">
+    &lt;h2 data-bigletter="A">&lt;strong>About&lt;/strong>&lt;/h2>
+    &lt;div class="separator">&lt;span>&lt;/span>&lt;/div>
+    &lt;h6 class="alttitle title-minimal">This template has been crafted to perfection&lt;/h6>
+   &lt;/div>
+  ...
+  
+  &lt;/div&gt; &lt;!-- END .wrapper -->
+		
+<strong> &lt;/div&gt;
+&lt;/section&gt; </strong>
+...
+</pre></p>
+		<br>
+		<p>
+			The sections have a default top padding (no bottom-padding).  If you don't want the section to stick to the next section/element you need to add an additional spacer.
+		</p>
+<p><pre>
+...
+  <strong>&lt;div class="spacer spacer-big">&lt;/div></strong>
+				
+ &lt;/div> &lt;!-- END .section-inner -->
+&lt;/section> &lt;!-- END SECTION #contact--> 
+</pre></p>	
+		<p>
+			In any case you don't want the default top padding, you can add the class "notoppadding".<br>
+			<i>Example: Done in the index.html for section #home in order to stick to the top. Otherwhise they would have been a spacing between.</i>
+		</p>
+<p><pre>
+<strong>&lt;section id="home" class="notoppadding"></strong>
+</pre></p>	
+		</div>
+
+		
+		
+		
+		<div id="page-title" class="section">
+			<h4 class="sectiontitle"><strong>Page Title</strong></h4>
+			<p class="attention">
+				The page-title element is used for all pages which doesn't use a fullwidth slider on first element.  So in fact for all html files except index.html, index2.html, index-mulipage.html and work-multipage.html.
+			</p>
+			<p>
+				The is the default markup for the page-title section.<br>
+				<strong><em>The page-title section can contain any type of content but usually there is one or multiple "heading" included.</em></strong>
+			</p>
+			<pre>
+...			
+&lt;/header>
+			
+<strong>&lt;!-- PAGE TITLE -->
+&lt;section id="page-title">
+ &lt;div class="section-inner">
+    &lt;h4>&lt;strong>Title Name&lt;/strong>&lt;/h4> 
+    &lt;div class="separator-small">&lt;span>&lt;/span>&lt;/div>
+    &lt;h6 class="alttitle title-minimal">SUbtitle&lt;/h6>
+  &lt;/div>
+&lt;/section>
+&lt;!-- PAGE TITLE --></strong>
+
+&lt;div class="page-body">
+...</pre>
+			<br><br>
+			<p>
+				By adding the class <strong>full-height</strong> the page-title section will automatically adapt to the viewport height.  When full-height is added, the section-inner automatically have a vertical middle align.  In this I recommend also to add the align-center class to have a vertical + horizontal center align.
+			</p>
+			<pre>
+&lt;section id="page-title" class="<strong>full-height</strong>">
+ &lt;div class="section-inner <strong>align-center</strong>"></pre>
+			<br>
+			<p>
+				You can also align the section-inner to the top or bottom by using <strong>vTop</strong> or <strong>vBottom</strong>.
+			</p>
+			<pre>
+&lt;section id="page-title" class="full-height">
+ &lt;div class="section-inner <strong>vTop</strong>"></pre>
+			<strong>Only use <em>vTop</em> + <em>vBottom</em> in combination with <em>full-height</em></strong>.<br>
+			It won't have any impact without the full-height class.
+		</div>
+
+		
+		
+		
+		<div id="split-sections" class="section section-important">
+			<h4 class="sectiontitle"><strong>Split Sections</strong></h4>
+			<p class="attention">
+				I really encourage you to take a few minutes and to read this part.  The Split sections probably is the tricky part of the whole template.  But if you read this, you will understand how it works and how to use it.
+			</p>
+			<br>
+			<p>
+				First rule to use split sections is the following: <strong>A split section CAN NOT be placed into an element which does not take the full width size like <em>.wrapper</em>, <em>.wrapper-small</em>, ...!</strong>
+			</p>
+			<p><pre>
+...			
+&lt;div id="agency-split" class="<strong>split-section clearfix</strong>">
+ 
+ &lt;div class="<strong>split-left</strong> split-half">
+  &lt;div class="split-wrapped-content">
+   YOUR CONTENT
+  &lt;div>
+  &lt;div class="split-bg">&lt;div>
+ &lt;div>  &lt;!-- END .split-left -->
+ 
+ &lt;div class="<strong>split-right</strong> split-half">
+  &lt;div class="split-wrapped-content">
+   YOUR CONTENT
+  &lt;div>
+  &lt;div class="split-bg">&lt;div>
+ &lt;div>  &lt;!-- END .split-right -->
+ 
+&lt;div> &lt;!-- END .split-section -->
+...  
+</pre></p>
+			<p>
+				This is the default markup.  Start by opening a div with classname "split-section clearfix". Choose a custom id to make reference in the css.
+			</p>
+			<br><br>
+			<h5><strong>split-left / split-right</strong></h5>
+			<p>
+				This will manage the position of the the 2 sections (left + right).  It must be used in combination with <strong>split-onethird</strong>, <strong>split-twothird</strong> or <strong>split-half</strong> to assign the size of the left/right element.
+			</p>
+			<p>
+				Sometimes you will see that the .split-right is placed above/before the .split-left (agency-split in index.html for example).  This will have no affect on bigger screens.  Why placing it above though?  For smartphone view.  In smartphone view it will be on first position although it's on second (right) postition on big screens. 
+			</p>
+			<br><br>
+			<h5><strong>split-bg</strong></h5>
+			<p>
+				This element is only needed if you want to have a background color,image,video for the allocated split-left/split-right element.
+				spli-bg will automatically fill out the whole left/right section depending the size of the section.<br>
+				In the contact section (index.html) you'll see that I placed the google map into split-bg in order to adapt to the height of the section.
+			</p>
+			<br><br>
+			<h5><strong>Split Content</strong></h5>
+			<p>What's the difference betwenn split-wrapped-content, split-full-content & split-mini-content?</p>
+			<br>
+			<div class="one-left">
+				<p><strong>split-wrapped-content</strong><br>
+					This will respect the main wrapped content and won't pass over this size. (1080px = default / 900px for smaller screens / 730px for tablet)
+				</p>
+				<p><pre>
+...
+&lt;div class="split-left split-half">
+ <strong>&lt;div class="split-wrapped-content"></strong>
+    YOUR CONTENT
+ &lt;div>
+&lt;div>
+...
+				</pre></p>
+			<p><img src="assets/wrapped-content.jpg"></p>
+			</div>
+			
+			<div class="one-right">
+				<p><strong>split-full-content</strong><br>
+					This will take the full available width.<br><br><br>
+				</p>
+				<p><pre>
+...
+&lt;div class="split-left split-half">
+ <strong>&lt;div class="split-full-content"></strong>
+    YOUR CONTENT
+ &lt;div>
+&lt;div>
+...
+				</pre></p>
+			<p><img src="assets/full-content.jpg"></p>
+			</div>
+			<div class="clear"></div>
+			
+			<br>
+			<br>
+			<br>
+			<div class="one-left">
+				<p><strong>split-mini-content</strong><br>
+					Use the mini content if you want to limit the width of the content.
+					It won't use the full width available but is still centered.
+					It will limit the content to 400px.
+				</p>
+				<p><pre>
+...
+&lt;div class="split-left split-half">
+ <strong>&lt;div class="split-mini-content"></strong>
+    YOUR CONTENT
+ &lt;div>
+&lt;div>
+...
+				</pre></p>
+			<p><img src="assets/mini-content.jpg"></p>
+			</div>
+			<div class="one-right">
+				<p><strong>vertical-center</strong><br>
+					Optionally you can add the class "vertical-center". This will automatically center the content vertically.<br><br>
+				</p>
+				<p><pre>
+...
+&lt;div class="split-left split-half">
+ &lt;div class="split-full-content <strong>vertical-center</strong>">
+    YOUR CONTENT
+ &lt;div>
+&lt;div>
+...
+				</pre></p>
+			<p><img src="assets/vertical-center.jpg"></p>
+			</div>
+			<div class="clear"></div>
+			
+		</div>
+
+		
+		
+		
+		<div id="fonts" class="section">
+			<h4 class="sectiontitle"><strong>Fonts</strong></h4>
+			<p>You have to include the fonts in every html you use/create.  Make sure to include them in the head before the css files.</p>
+			<p><pre>
+&lt;!-- FONTS -->
+&lt;link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+&lt;link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+&lt;!-- FONTS -->
+</pre></p>
+			<p>
+			You can see that I included 2 Fonts (Montserrat & Lato) in different weights.<br>
+			So when I choose this font in the style.css I always added the weight I wanted.
+			</p>
+			<p><pre>
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat'; 
+font-weight: 400;
+color: #0d0d0d;
+}</pre></p>
+			<br><br>
+			<h5><b>Change fonts</b></h5>
+			<p>
+				To change a font choose another Webfont from the Google Font library or use other sources.<br>
+				You have to go through the syle.css (+ settings.css) and change all selectors where I assigned the font.<br><br>
+				<b>Tip</b>: use the search/replace function (Mac = cmd+f / Win = ctrl+f) which almost every editor got.
+			</p>
+			<p class="attention">
+				<b>Revolution Slider</b>: The font captions settings for the revolution slider are in the settings.css.
+			</p>
+		</div>	
+		
+		<div id="preloader" class="section">
+			<h4 class="sectiontitle"><strong>Preloader / Pageloader</strong></h4>
+			<p>
+				You will find the html markup of the page loader in all html pages.  This displays a loading bar until the page is loaded.
+			</p>
+			<pre>
+&lt;!-- PAGELOADER -->
+&lt;div id="page-loader" class="text-light">
+  &lt;div class="page-loader-inner">
+    &lt;div class="loader-logo-name">&lt;img src="files/uploads/pond-logo-light.png" alt="Logo"/>&lt;/div>
+    &lt;h6 class="alttitle title-minimal">Loading&lt;/h6>
+  &lt;/div>
+&lt;/div>
+&lt;!-- PAGELOADER --></pre>
+			<p>
+			<br>
+			<p>
+			The loader bar is done by the pace script/plugin.  So make sure to have this script included if you want to show the loader.
+			</p>
+			<pre>
+&lt;script type='text/javascript' src='files/js/jquery.pace.js'>&lt;/script></pre>
+			</p>
+		
+		
+		
+		</div>	
+		
+		<div id="header" class="section">
+			<h4 class="sectiontitle"><strong>Header</strong></h4>
+			<p>
+				The header is another unique feature of the template.  Use this markup for the header.
+			</p>
+			<pre>
+&lt;!-- HEADER -->
+&lt;header id="header">        
+ &lt;div class="header-inner clearfix">
+ 
+  &lt;!-- DEFAULT HEADER CONTENT -->
+  &lt;div class="default-header-content"> 
+  
+   &lt;div id="logo" class="left-float">
+    &lt;a id="defaut-logo" class="logotype" href="index.html">
+     &lt;img src="files/uploads/pond-logo-light.png" alt="Logo">&lt;/a>
+	 
+    &lt;a id="fixed-logo" class="logotype" href="index.html">
+     &lt;img src="files/uploads/pond-logo.png" alt="Logo">&lt;/a>
+   &lt;/div>
+  
+   &lt;div class="menu right-float clearfix">
+   ...
+   &lt;/div>
+   
+  &lt;/div>
+  &lt;!-- DEFAULT HEADER CONTENT -->
+  
+ &lt;/div>
+&lt;/header>
+&lt;!-- HEADER --></pre>
+			<p>Use 2 logos (default-logo + fixed-logo).  The default-logo is the logo which shows on page load in overlay mode.  Usually the light logo if the background is dark.  The fixed-logo is the logo which shows when the header is fixed in the border part.</p>
+			<br><br>
+			<p>
+				By default the header is placed on top in "overlay mode".<br>
+				<img src="assets/overlay-top.jpg">
+			</p>
+			<br>
+			<p>Add the class "overlay-bottom" to place it to the bottom.
+			<pre>
+&lt;header id="header" class="<strong>overlay-bottom</strong>"></pre><br>
+				<img src="assets/overlay-bottom.jpg">
+</p>
+		   <br>
+		   <p>
+		   		If you don't want the overlay header you can use the class "non-overlay" and the header will just place at the order of the html markup with a dark (black) background. In this case the "overlay-bottom" class don't have impact anymore.
+		   <pre>
+&lt;header id="header" class="<strong>non-overlay</strong>"></pre><br>
+				<img src="assets/overlay-non.jpg">
+</p>
+			<br>
+			<br>
+		   <h5><strong>Fixed/Sticky Header</strong></h5>
+		   <p>
+		   		By default the header will switch to a fixed/sticky position as soon the header is out of the viewport.  By using the class "sticky-header" the header will be fixed on page load.  <strong><em>(Idem for the footer)</em></strong>
+				<pre>
+&lt;header id="header" class="<strong>sticky-header</strong>"></pre><br>
+				<img src="assets/sticky-header.jpg">
+		   </p>
+		   <br>
+		   <p>
+		   		You can also disabling the fixed/sticky feature by using the class "non-sticky".
+				<pre>
+&lt;header id="header" class="<strong>non-sticky</strong>"></pre>
+		   </p>
+		   <br>
+			<br>
+		   <h5><strong>Alternative fixed/sticky Header</strong></h5>
+		   <p>
+		   		You can show a different fixed header than the default header (as done in the portfolio/blog single html pages).
+				This is helpful for shiwing different infos on the fixed header.
+		   </p>
+		   <pre>
+&lt;!-- HEADER -->
+&lt;header id="header">        
+ &lt;div class="header-inner clearfix">
+ 
+  &lt;!-- FIXED HEADER CONTENT (*optional / this will be shown when header is switching to fixed) -->
+ <strong> &lt;div class="fixed-header-content"> 
+   &lt;h1 id="header-name" class="alttitle title-minimal left-float">&lt;strong>Lokomotive&lt;/strong>&lt;/h1>
+   &lt;div id="social-share" class="right-float">
+    &lt;a href="#" class="show-share">Share&lt;/a>
+    &lt;ul class="socialmedia-widget alttitle">
+     &lt;li class="facebook">&lt;a href="#">&lt;/a>&lt;/li>
+     &lt;li class="twitter">&lt;a href="#">&lt;/a>&lt;/li>
+     &lt;li class="googleplus">&lt;a href="#">&lt;/a>&lt;/li>
+     &lt;li class="pinterest">&lt;a href="#">&lt;/a>&lt;/li>
+    &lt;/ul>
+   &lt;/div>
+  &lt;/div></strong>
+  &lt;!-- FIXED HEADER CONTENT -->
+ 
+  &lt;!-- DEFAULT HEADER CONTENT -->
+  &lt;div class="default-header-content"> 
+  ...
+  &lt;/div>
+  &lt;!-- DEFAULT HEADER CONTENT -->
+  
+ &lt;/div>
+&lt;/header>
+&lt;!-- HEADER --></pre>
+	<a href="https://www.youtube.com/watch?v=Qdb1Y_Tj8mY" target="_blank" class="video-tutorial"><span class="icon"></span><span class="text">Video Tutorial</span></a>
+	  	</div>
+			
+			
+		<div id="logo" class="section">
+			<h4 class="sectiontitle"><strong>Change Logo</strong></h4>
+			<p>
+				Change the path to your logo image.
+			</p>
+			<pre>
+   ...
+   &lt;div id="logo" class="left-float">
+    &lt;a id="defaut-logo" class="logotype" href="index.html">
+     &lt;img src="<strong>files/uploads/pond-logo-light.png</strong>" alt="Logo">&lt;/a>
+	 
+    &lt;a id="fixed-logo" class="logotype" href="index.html">
+     &lt;img src="<strong>files/uploads/pond-logo.png</strong>" alt="Logo">&lt;/a>
+   &lt;/div>
+   ...</pre>
+			<p>Use 2 logos (default-logo + fixed-logo).  The default-logo is the logo which shows on page load in overlay mode.  (Usually the light logo if the background is dark)  The fixed-logo is the logo which shows when the header is fixed in the border part.</p>
+			<p>
+				By default the height of the logo is limited to 40px. So even if you have an image file which is higher than 40px it will be resized to 40px.  If you want to change that you need to do this in several places in the style.css <br>(Everywhere you can find the <em>/* depending on the logo height */</em> comment on the style.css)
+			</p>
+<pre>
+<em>AT LINE 510 you should see this</em>
+header #logo {
+	...
+	<strong>height: 40px;</strong>				
+	
+<em>AT LINE 520 you should see this</em>
+	<strong>#logo a { #logo a { height: 40px; }	 }	</strong>
+	
+<em>AT LINE 620 (LOGO FOR PAGELOADER SCREEN)</em>
+.page-loader-inner .loader-logo-name img {
+	...
+	<strong>max-height: 40px;	</strong>
+		
+<em>AT LINE 760 (LOGO FOR MENU SCREEN)</em>
+	<strong>nav#main-nav .nav-logo img { height: 40px; }</strong>	
+	
+<em>AT LINE 888 + 889</em>
+	<strong>.non-overlay .open-nav {	height: 40px; }
+	.overlay-bottom .open-nav { margin-top: 20px; }</strong>
+</pre>
+	  	</div>	
+			
+			
+          
+		<div id="menu" class="section">
+			<h4 class="sectiontitle"><strong>Menu / Navigation</strong></h4>
+			<p>
+				Please use the following markup for the main navigation.
+			</p>
+            <pre>
+&lt;div class="menu right-float clearfix">
+ &lt;a href="#" class="open-nav">&lt;span>&lt;/span>&lt;/a>
+ &lt;nav id="main-nav"&gt;
+   &lt;ul&gt;
+      &lt;li class=&quot;current-menu-item&quot;&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;li&gt;
+      &lt;li&gt;&lt;a href="#about" class="scroll-to" data-bigletter="A"&gt;About&lt;/a&gt;
+	  ...
+      &lt;li>&lt;a href="elements.html" data-bigletter="F">Features&lt;/a>
+         &lt;ul class=&quot;sub-menu&quot;&gt;
+            &lt;li&gt;&lt;a href="elements.html"&gt;General Elements&lt;/li&gt;
+            ...
+         &lt;/ul&gt;   
+      &lt;li&gt;
+   &lt;/ul&gt;
+ &lt;/nav&gt;</pre>
+			<p>
+				<b>class="current-menu-item"</b>: add this classname to the actual li element.  In the elements.html for example it would be added to this li.
+			</p>
+			<p>
+				<b>href="#about"</b>: this must have the same name then the id of the section you want to assign starting by a hashtag.
+			</p>
+			<p>
+				<b>class="scroll-to"</b>: add this class to all menu items which should scroll to an section. You can also use this class on any anchor tag in combination with the right href value.<br>
+				You see that "Elements" does not this classname because it's linking to another html page.
+			</p>
+			<p>
+				<b>data-bigletter="A"</b>: This will ad the Big Letter on hover. 
+			</p>
+			
+            <p class="attention">
+            <span class="red"><strong>Important:</strong></span>
+            If you use the scroll-to you need to make sure to have the javascript jquery.scroll.min.js included.<br>
+			In multipage for example it's not included because it's not needed.
+            </p>
+          </div>
+          
+          <div id="slider" class="section">
+           	<h4 class="sectiontitle"><strong>Slider / Carousel</strong></h4>
+				<p>
+				This template uses 2 Slider scripts.
+				</p>
+				<ul>
+					<li><b>Revolution Slider</b> for fullwidth Home Slider</li>
+					<li><b>Owlcarousel</b> for all other content sliders (portfolio,blog,testimonials) or carousel (logo)</li>
+				</ul>
+            <br><br>
+            <h5><strong>Revolution Slider</strong></h5>
+            <p>
+            	For a full documentation of the revolution slider you'll find a second documentation folder called "revolution-slider".<br>
+			  	Please see the settings.css for the slider stylings. (captions, navigation, etc)
+            </p>
+            <p>
+            Use this markup.
+            </p>
+            <pre>
+&lt;!-- REVOLUTION SLIDER -->
+&lt;div class="rev-slider-container">
+ &lt;div class="rev-slider" >
+  &lt;ul>
+  
+  &lt;!-- THE SLIDES -->
+  &lt;li>&lt;/li>
+  ...
+  
+  &lt;/ul>
+ &lt;/div>
+&lt;/div>        
+&lt;!-- REVOLUTION SLIDER -->
+</pre>
+            
+			<p>
+            After you've added your markup and the different slides initialise the slider in the script.js at line +-280.
+            </p>
+            <pre>
+/*---------------------------------------------- 
+R E V O L U T I O N   S L I D E R
+------------------------------------------------*/
+if(jQuery().revolution) {
+ jQuery('.rev-slider').revolution({
+  delay:10000,
+  startheight: 500,
+  startwidth: 1200,
+  hideTimerBar: "on",
+  onHoverStop:"on",
+  navigationType:"bullet",
+  hideThumbs:0,					// Bullets always visible
+  navigationHAlign:"right",
+  navigationVAlign:"center",
+  navigationHOffset:20,
+  navigationVOffset:0,
+  navigationArrows:"none",
+  fullWidth:"off",
+  fullScreen:"on",
+  fullScreenOffsetContainer: "#pseudo-header"
+ });
+}</pre>
+			<br>
+            <h6><strong>Combining RS Slider + Background video / Parallax Background</strong></h6>
+				<p>
+					You can combine the revolution slider + Background video  OR Parallax Background.  To do so you must first use the transparent.png image file as main image of the different slides.
+				</p>
+				<pre>
+&lt;!-- THE FIRST SLIDE -->
+&lt;li data-transition="slidedown" data-slotamount="5" data-masterspeed="1200">
+<b>&lt;img src="files/uploads/transparent.png"></b></pre>
+				<p>
+				After this you just need to add the general background video / parallax rules to the parent section (probably #home).
+				</p>
+            <br><br>
+            <h5><strong>Owlcarousel / Slider</strong></h5>
+            <p>
+            I used the owlcarousel plugin for all slides which are in the main content area and for the carousel.
+            Please make sure to include the <span class="accent">owl.carousel.css</span>,<span class="accent">owl.transitions.css</span> and <span class="accent">jquery.owl.carousel.min.js</span> for the pages you want to use the carousel/slider.
+            </p>
+			<br>
+			<h6><strong>Owl Slider</strong></h6>
+            <pre>
+&lt;div class="owlslider <strong>owlnavdark</strong>">
+ &lt;div>
+  ...
+ &lt;/div>
+ 
+ ...
+ 
+&lt;/div> &lt;!-- END .owlslider --></pre>
+			<p>By default the bullets are white but you can choose dark/black bullets by adding owlnavdark</p>
+			<p>
+            You will find the script initialiser in the script.js at line +-306.
+            </p>
+			<pre>
+jQuery(".owlslider").owlCarousel({
+	autoPlay : false,
+	stopOnHover : true,
+	navigation: false,
+	slideSpeed : 800,	
+	paginationSpeed : 800,
+	singleItem : true,
+	autoHeight : true
+});</pre>
+			<br>
+			<br>
+			<h6><strong>Owl Carousel</strong></h6>
+			<pre>
+&lt;div class="owlcarousel content-carousel">
+ &lt;div>
+  ...
+ &lt;/div>
+ ...
+&lt;/div> &lt;!-- END .owlcarousel --></pre>
+			<p>
+            You will find the script initialiser in the script.js at line +-317.
+            </p>
+			<pre>
+jQuery(".owlcarousel").owlCarousel({
+	items : 4,
+	itemsDesktop:false,
+	itemsDesktopSmall:false,
+	itemsTablet: [860,2],
+	itemsMobile: [640,1],
+	autoplay: false,
+	autoHeight : true
+});</pre>
+			<p>You can also choose/change some default options with the data attribute.</p>
+			<pre>&lt;div class="owlcarousel content-carousel" <strong>data-autoplay="6000" data-pagination="false"</strong>></pre>
+          </div>
+          
+          
+          <div id="masonry" class="section">
+          		<h4 class="sectiontitle"><strong>Masonry (Portfolio / Blog layout)</strong></h4>
+            	<p>
+            	The isotope script is used for the masonry layout used for Portfolio and Blog layout.  Create as much items as you wants, here's the default markup.
+            	</p> 
+            
+            <p><pre>
+&lt;div id=&quot;GRID-ID&quot; class=&quot;masonry clearfix&quot; data-maxitemwidth="600"&gt;
+   
+ &lt;div class="masonry-item <strong>branding</strong>">
+ ...
+ &lt;/div> &lt;!-- END .masonry-item -->
+   
+ ...
+
+&lt;/div&gt; &lt;!-- END #GRID-ID --&gt;</pre>
+			<p><strong>Details</strong></p>
+            <ul>
+            	<li><span class="accent">#GRID-ID</span> -> you can customize this name, make sure to use the same name in the filter option if used (see below).</li>
+            	<li><span class="accent">.data-maxitemwidth</span> -> This handles the itemwidth. as higher the value as bigger the thumbnails.  This also depends on the screen size.  If you use for example '600' make sure that your images has also this width because in some cases the tiles could have this width size.</li>
+            	<li><span class="accent">.branding</span> -> This is the name for the filter attribute</li>
+            </ul>
+            <p>
+            You can also add the classname <b>masonry-spaced</b> to the grid element.  This will add a spacing between the thumbnails which you can manage in the css.
+            </p>
+			<p><pre>
+&lt;div id=&quot;portfolio-grid&quot; class=&quot;masonry <b>masonry-spaced</b> ...</pre></p>
+				<p>
+            The Masonry will automatically adapt to the width of the parent container.
+            </p>
+				<p>
+				For more options please take a look at the portfolio-layout.html
+				</p>
+				<br><br>
+            	<h5><strong>Filter</strong></h5>
+				<p>
+            The filter is part of the isotope script.  It will only work on masonry-items. <br>
+            All filter anchors needs a <span class="accent">data-option-value</span> attribute with the correct filter name (example: .branding) 
+            </p>
+			<pre>
+&lt;ul id="portfolio-filter" class="filter clearfix" data-related-grid="portfolio-grid">
+  &lt;li&gt;&lt;a class=&quot;active&quot; href="#" data-option-value=&quot;*&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-option-value=&quot;.web&quot; href=&quot;#&quot; title=&quot;Web&quot;&gt;Web&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-option-value=&quot;.branding&quot; href=&quot;#&quot; title=&quot;Motion&quot;&gt;Motion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-option-value=&quot;.motion&quot; href=&quot;#&quot; title=&quot;Print&quot;&gt;Print&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+				<p>
+					It's important that the value of <b>data-related-grid</b> is the same than the id name of the grid (see above).
+				</p>
+          </div>
+		  
+		  	<div id="bgvideo" class="section">
+          		<h4 class="sectiontitle"><strong>Background Video</strong></h4>
+				<p>
+				In fact you can add a background video to every kind of element but I usually do it in a horizontal section or a split section.
+				</p>
+				<p>
+				<strong>Make sure to provide your video in 3 different formats:</strong>
+				</p>
+				<ul>
+					<li>mp4</li>
+					<li>webm</li>
+					<li>ogg</li>
+				</ul>
+				<p>
+				Add the classname <strong>"videobg-section"</strong> (and optionally 'text-light' if you use a dark video) to the element, and fill in the different <strong>"data-"</strong> options.
+				</p>
+				<pre>
+&lt;div id="parallax-video" class="horizontalsection text-light <strong>videobg-section</strong>"
+ <strong>data-videofile="files/uploads/coffee" 
+ data-videowidth="1280"
+ data-videoheight="720"
+ data-videoposter="files/uploads/poster-image.jpg"
+ data-videoparallax="false"
+ data-videooverlaycolor="#000000"
+ data-videooverlayopacity="0.5"
+ data-sound="true"</strong>></pre>
+ 				<ul>
+					<li><b>data-videofile</b> -> please add the path to your files <strong>without the file ending</strong> (ie: .mp4)</li>
+					<li><b>data-videowidth + data-videoheight</b> -> very important that you enter the right values</li>
+					<li><b>data-videoposter</b> -> this poster is shown for devices which don't support background videos</li>
+					<li><b>data-videoparallax</b> -> true or false for a parallax effect</li>
+					<li><b>data-videooverlaycolor</b> -> optional overlay color / leave empty if not wanted</li>
+					<li><b>data-videooverlayopacity</b> -> opacity value for the overlay</li>
+					<li><b>data-sound</b> -> if true, the video also plays the sound with option to mute it manually</li>
+				</ul>
+				
+				<p class="attention">
+				<strong>Note</strong>: If you're uploading your site to a server and the video is not showing in some browsers, this is server related.  Make sure to enable the MIME types.  You can enable them via your xerver settings or via htaccess.
+				</p>
+				<p class="attention">
+				<strong>Note</strong>: Mobile devices like Tablets or Smartphones doesn't support background videos.  In this case the poster image will be displayed.
+				</p>
+			</div>
+			
+			<div id="parallax" class="section">
+          		<h4 class="sectiontitle"><strong>Parallax Backgrounds</strong></h4>
+				<p>
+				Same as background video, you could add a parallax image to every element but I usually created an "horizontalsection" or "split section" to do so.
+				</p>
+				<p>
+				Add the classname "parallax-section" (and optionally 'text-light' if you use a dark background), the "data-parallax-image".
+				</p>
+				<pre>
+&lt;div id="testimonials" class="horizontalsection text-light <strong>parallax-section</strong>" 
+  <strong>data-parallax-image="files/uploads/parallaxbg.jpg"</strong>></pre>
+				<p>
+					<strong>For a split section you would add this to the .split-bg</strong>
+				</p>
+			</div>
+	
+          
+          <div id="audio-video" class="section">
+           	<h4 class="sectiontitle"><strong>Video</strong></h4>
+            <br><br>
+            <h5><strong>Embedded Video</strong></h5>
+            <p>
+            Go to vimeo ,youtube or any other site and copy the embedding <b>iframe</b> code.
+            </p> 
+            <pre>
+&lt;iframe src=&quot;http://player.vimeo.com/video/20621393&quot; width=&quot;500&quot; height=&quot;281&quot; 
+frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;</pre>
+			<br><br>
+            <h5><strong>Selfhosted Video</strong></h5>
+            <p>
+            When using an selhosted video you need to provide the video in 3 different files to make it work in all browser.
+            </p> 
+            <ul>
+            	<li>.m4v</li>
+            	<li>.ogv</li>
+            	<li>.webm</li>
+            </ul>
+            <pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+jQuery(document).ready(function(){
+   if(jQuery().jPlayer) {
+      jQuery(&quot;#jquery_jplayer_video1&quot;).jPlayer({
+         ready: function () {
+            jQuery(this).jPlayer(&quot;setMedia&quot;, {
+               m4v: &quot;YOURVIDEOPATH.m4v&quot;,
+               ogv: &quot;YOURVIDEOPATH.ogv&quot;,
+               webmv: &quot;YOURVIDEOPATH.webm&quot;,
+               poster: &quot;YOURIMAGE.jpg&quot;
+            });
+         },
+         size: {
+            width: &quot;100%&quot;,
+            height: &quot;auto&quot;
+         },
+         swfPath: &quot;files/jplayer&quot;,
+         cssSelectorAncestor: &quot;#jp_interface_video1&quot;,
+         supplied: &quot;ogv,m4v,webmv,all&quot;
+      });
+   }
+});
+&lt;/script&gt;
+
+
+&lt;div id=&quot;jquery_jplayer_video1&quot; class=&quot;jp-jplayer jp-jplayer-video&quot;&gt;&lt;/div&gt;
+
+   &lt;div class=&quot;jp-video-container&quot;&gt;
+      &lt;div class=&quot;jp-video&quot;&gt;
+         &lt;div class=&quot;jp-type-single&quot;&gt;
+            &lt;div id=&quot;jp_interface_video1&quot; class=&quot;jp-interface&quot;&gt;
+               &lt;ul class=&quot;jp-controls&quot;&gt;
+                  &lt;li&gt;&lt;div class=&quot;seperator-first&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;div class=&quot;seperator-second&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-play&quot; tabindex=&quot;1&quot;&gt;play&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-pause&quot; tabindex=&quot;1&quot;&gt;pause&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-mute&quot; tabindex=&quot;1&quot;&gt;mute&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-unmute&quot; tabindex=&quot;1&quot;&gt;unmute&lt;/a&gt;&lt;/li&gt;
+               &lt;/ul&gt;
+               
+               &lt;div class=&quot;jp-progress-container&quot;&gt;
+                  &lt;div class=&quot;jp-progress&quot;&gt;
+                     &lt;div class=&quot;jp-seek-bar&quot;&gt;
+                        &lt;div class=&quot;jp-play-bar&quot;&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+               
+               &lt;div class=&quot;jp-volume-bar-container&quot;&gt;
+                  &lt;div class=&quot;jp-volume-bar&quot;&gt;
+                     &lt;div class=&quot;jp-volume-bar-value&quot;&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+               
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt; &lt;!-- END .jp-video-container --&gt;</pre>
+   			<p>
+            Use this markup and change the path to your files.  Please make sure to have included the <span class="accent">jplayer.css</span> and the <span class="accent">jplayer.min.js</span>.
+            </p>
+			<br><br><br>
+           <h4 class="sectiontitle"><strong>Audios</strong></h4>
+			<br><br>
+            <h5><strong>Selfhosted Audio</strong></h5>
+            <p>
+            When using an selhosted audio you need to provide the audio in 2 different files to make it work in all browser.
+            </p> 
+            <ul>
+            	<li>.mp3</li>
+            	<li>.ogg (oga)</li>
+            </ul>
+            <pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+   jQuery(document).ready(function(){
+      if(jQuery().jPlayer) {
+         jQuery(&quot;#jquery_jplayer_audio2&quot;).jPlayer({
+            ready: function () {
+               jQuery(this).jPlayer(&quot;setMedia&quot;, {
+                  mp3: &quot;YOURAUDIOPATH.mp3&quot;,
+                  oga: &quot;YOURAUDIOPATH.ogg&quot;,
+                  end: &quot;&quot;
+               });
+            },
+            swfPath: &quot;files/jplayer&quot;,
+            cssSelectorAncestor: &quot;#jp_interface_audio2&quot;,
+            supplied: &quot;oga,mp3,all&quot;
+         });
+      }
+   });
+&lt;/script&gt;
+
+&lt;div id=&quot;jquery_jplayer_audio2&quot; class=&quot;jp-jplayer jp-jplayer-audio&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;jp-audio-container&quot;&gt;
+   &lt;div class=&quot;jp-audio&quot;&gt;
+      &lt;div class=&quot;jp-type-single&quot;&gt;
+         &lt;div id=&quot;jp_interface_audio2&quot; class=&quot;jp-interface&quot;&gt;
+            &lt;ul class=&quot;jp-controls&quot;&gt;
+               &lt;li&gt;&lt;div class=&quot;seperator-first&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;div class=&quot;seperator-second&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-play&quot; tabindex=&quot;1&quot;&gt;play&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-pause&quot; tabindex=&quot;1&quot;&gt;pause&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-mute&quot; tabindex=&quot;1&quot;&gt;mute&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-unmute&quot; tabindex=&quot;1&quot;&gt;unmute&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            
+            &lt;div class=&quot;jp-progress-container&quot;&gt;
+               &lt;div class=&quot;jp-progress&quot;&gt;
+                  &lt;div class=&quot;jp-seek-bar&quot;&gt;
+                     &lt;div class=&quot;jp-play-bar&quot;&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;jp-volume-bar-container&quot;&gt;
+               &lt;div class=&quot;jp-volume-bar&quot;&gt;
+                  &lt;div class=&quot;jp-volume-bar-value&quot;&gt;&lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;  &lt;!-- END .jp-audio-container --&gt;</pre>
+   			<p>
+            Use this markup and change the path to your files.  Please make sure to have included the <span class="accent">jplayer.css</span> and the <span class="accent">jplayer.min.js</span>.
+            </p>
+          </div>
+          
+          <div id="contact" class="section">
+           	<h4 class="sectiontitle"><strong>Contact Form</strong></h4>
+            <p>
+            	Create a new form with all the attributes like below
+            </p> 
+            <pre>
+&lt;form id=&quot;contact-form&quot; class=&quot;checkform&quot; action=&quot;&quot; 
+target=&quot;contact-send.php&quot; method=&quot;post&quot; &gt;</pre>
+            <p>
+				You must at least add 3 form-rows with the <span class="accent">name, email + message</span>.
+				These 3 fields are required for the sending. Take a look at the markup on the contact section of the index.html
+			</p>		
+			<p>	
+            	You can add more fields if wanted.<br>
+				Please add the classname <span class="accent">req</span> to the label if this field is required.<br>
+            </p>
+            <pre>
+&lt;div class=&quot;form-row clearfix&quot;&gt;
+ &lt;label for=&quot;customfield&quot; class=&quot;req&quot;&gt;Message *&lt;/label&gt;
+ &lt;input type=&quot;text&quot; name=&quot;customfield&quot; class=&quot;customfield&quot; 
+ id=&quot;customfield&quot; value=&quot;&quot; placeholder="Custom Field *" /&gt;  
+&lt;/div&gt;</pre>
+			<p>
+            	When adding a new field you also need to add these fieldnames in the hidden field <span class="accent">fields</span> seperated and ending by a ",".<br> Change also the email and the Subject Name.
+            </p>
+            <pre>
+&lt;input type=&quot;hidden&quot; name=&quot;subject&quot; <b>value=&quot;Contact Subject Pond html&quot;</b> /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;fields&quot; <b>value=&quot;name,email,message,customfield,&quot;</b> /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendto&quot; <b>value=&quot;YOUREMAIL@SERVER.com&quot;</b> /&gt;</pre>
+			<p>
+            	Please add an form-note message at the wanted position.  This message will be displayed if there are any errors/success. 
+            </p>
+            <pre>
+&lt;div id="form-note">
+ &lt;div class="alert alert-error">
+  &lt;h6>&lt;strong>ERROR&lt;/strong>: Please check your entries!&lt;/h6>
+ &lt;/div>
+&lt;/div></pre>
+			<p class="attention">
+            <strong>Note</strong>: If you have good php knowledge you can take a look at the contact-send.php and change it if you want. The javascript check function is in pond-form.js
+            </p>
+          </div>
+		  
+		  
+		  	<div id="map" class="section">
+           	<h4 class="sectiontitle"><strong>Google Map</strong></h4>
+            <p>
+            	Search first for your longitude and latitude on <a href="http://itouchmap.com/latlong.html" target="_blank">itouchmap.com</a>.<br>
+                Once you got them use this script to add your google map.
+            The map will always take the full width of the parent container. You just need to set up the height vie inline css.</p> 
+            <pre>
+&lt;div id=&quot;map&quot; class=&quot;header-map&quot; style=&quot;height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://maps.google.com/maps/api/js?sensor=false&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt
+   function mapinitialize() {
+      var latlng = new google.maps.LatLng(-33.86938,151.204834);
+      var myOptions = {
+         zoom: 14,
+         center: latlng
+         scrollwheel: true,
+         scaleControl: false,
+         disableDefaultUI: false,
+         mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      
+      var map = new google.maps.Map(document.getElementById(&quot;map&quot;),myOptions);
+      var image = &quot;files/uploads/map-pin.png&quot;;
+      var marker = new google.maps.Marker({
+         map: map,
+         icon: image,
+         position: map.getCenter()
+      });
+      
+      var contentString = '&lt;b&gt;Office&lt;/b&gt;&lt;br&gt;Streetname 13&lt;br&gt;50000 Sydney';
+      var infowindow = new google.maps.InfoWindow({
+         content: contentString
+      });
+      
+      google.maps.event.addListener(marker, 'click', function() {
+         infowindow.open(map,marker);
+      });
+      
+   }
+   mapinitialize();
+&lt;/script&gt;</pre>
+			<p>
+            	Change the map-pin image if you want and the Text for the infobox.
+            </p>
+          </div>
+          
+                    
+          <div id="elements" class="section">
+           	<h4 class="sectiontitle"><strong>Elements / Shortcodes</strong></h4>
+				<br><br>
+            	<h5><strong>Spacer</strong></h5>
+				<p>
+					If you already took a look at the html files you probably met some <strong>"spacer"</strong> elements.  These elements have been created to give you control over some spacings.  <br>For example I used them to add a spacing at the bottom of the last section of the page. 
+				</p>
+				<p>
+				 Just add a div with the classname spacer + the height of the spacer
+				</p>
+				<pre>&lt;div class="spacer spacer-big">&lt;/div></pre>
+				<ul>
+					<li><strong>spacer-big</strong> = 120px</li>
+					<li><strong>spacer-medium</strong> = 80px</li>
+					<li><strong>spacer-small</strong> = 40px</li>
+					<li><strong>spacer-mini</strong> = 15px</li>
+				</ul>
+				<br><br>
+            	<h5><strong>Separator</strong></h5>
+				<p>
+					The seperator will create a seperator line.<br>
+					It's used for the section title for example, but you can use it where you want
+				</p>
+				<pre>&lt;div class="separator">&lt;span>&lt;/span>&lt;/div></pre>
+				<pre>&lt;div class="separator-small">&lt;span>&lt;/span>&lt;/div></pre>
+				<br><br>
+            	<h5><strong>Horizontal Section</strong></h5>
+				<p>
+					The horizontal section is used for make use of different background (parallax,videobg or bg color).<br>
+					A horizontal section MUST NOT be placed into a wrapper element!
+				</p>
+				<pre>
+&lt;div class="horizontalsection">
+ &lt;div class="horizontalinner wrapper">
+  ...
+ &lt;/div>
+&lt;/div></pre>
+				<p>Use the markup above.  You see that the horizontalsection element is always followed by a horizontalinner.  This is important.  The horizontalsection has nor margin-top or margin-bottom because you could make use of another horizontalsection just below another and a margin wouldn't look good.  If you want a spacing between section, use a spacer element.</p> 
+				<br><br>
+            	
+            	<h5><strong>Icons</strong></h5>
+				<p>
+					This template uses the icon family <strong>Pixeden 7 Stroke</strong> and <strong>Font Awesome</strong>.  You can place the icons just anywhere with the<strong> &lt;i></strong> tag.
+				</p>
+				<br>
+            	<h6><strong>Pixeden 7 Stroke</strong></h6>
+				<pre> &lt;i class="pe-7s-browser pe-4x">&lt;/i></pre>
+				<br>
+				<h6><strong>Font Awesome</strong></h6>
+				<pre> &lt;i class="fa fa-check-square-o fa-3x"> &lt;/i></pre>
+				<p>
+					Please take a look here to have a full list of the available icons<br>
+					<a href="http://fontawesome.io/icons/" target="_blank">http://fontawesome.io/icons/</a>
+				</p>
+			</div>
+			
+			<div id="retina" class="section">
+            <h5><strong>Javascript (Your custom images)</strong></h5>
+            <p>
+            	All pages include the retina.js.  When your users load a page, <span class="accent">retina.js</span> checks each image on the page to see if there is a high-resolution (@2x) version of that image on your server. If a high-resolution variant exists, the script will swap in that image in-place.
+            </p>
+			<p>
+				<b>Example</b><br>
+				The logo image file is available in 2 version (pond-logo.png + pond-logo@2x.png).
+				On retina devices the @2x.png file is included.
+			</p>
+			<p class="attention">
+				<b>Note</b><br>The retina.js can only apply on online server and won't work if files are opened locally.
+			</p>
+          </div>
+          
+          <div id="css" class="section">
+           	<h4 class="sectiontitle"><strong>Css Files</strong></h4>
+            <p>
+            You should find the following css files 
+            </p> 
+            <ol>
+            	<li><span class="accent">style.css</span> -> main style <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">font-awesome.min.css</span> -> css for fontawsome icons <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">pe-icon-7-stroke.css</span> -> css for Pixeden icons <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">mqueries.css</span> -> css rules for being responsive <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">fancybox.css</span> -> style for fancybox / lightbox</li>
+            	<li><span class="accent">isotope.css</span> -> style for isotope animations (portfolio filter)</li>
+            	<li><span class="accent">colored.css</span> -> style for colored elements</li>
+            	<li><span class="accent">owl.carousel.css</span> -> owlcarousel css</li>
+            	<li><span class="accent">owl.transitions.css</span> -> owlcarousel css</li>
+            	<li><span class="accent">jplayer/jplayer.css</span> -> style for jplayer plugin (selhosted video/audio)</li>
+            	<li><span class="accent">rs-plugin/css/settings.css</span> -> style for revolution slider plugin (home slider)</li>
+            </ol>
+            <p>
+            	All css files with <span class="red"><b>!important</b></span> must be included in all html files.<br>
+				The other files are only needed if you use the appropriate jquery script in the file.
+            </p>
+			<p>
+				<b>Example:</b><br>
+				The jplayer.css from the jplayer plugin is only included in the blog-single2.html because that's the only file which uses the plugin.
+			</p>
+			<p class="attention">
+            	<strong>Note:</strong>
+                The mqueries.css must always be the last css file!
+            </p> 
+				<br><br>
+				<h5><strong>Colored css</strong></h5>
+				<p>
+					add the colored.css file to your html files if you want to add some colored elements.  You can of course edit/add some css to this file.
+				</p>
+				<br><br>
+				<h5><strong>Customize css</strong></h5>
+				<p class="attention">
+					I recommend to do create a custom css file to do all your customizations or use the bottom of the style.css.  You should find a CUSTOM Section.  If there is an update of the template you can easily copy your customization to the updated style.css.
+				</p>
+				<pre>
+/*---------------------------------------------- 
+21. CUSTOM STYLE
+------------------------------------------------*/
+
+/*YOUR CUSTOM CSS*/</pre>
+          </div>
+          
+          <div id="javascript" class="section">
+           	<h4 class="sectiontitle"><strong>Javascript</strong></h4>
+            <p>
+            You should find the following js files 
+            </p> 
+            <ol>
+            	<li><span class="accent">jquery-1.9.1.min.js</span> -> jquery library <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">script.js</span> -> initiaise all different scripts <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">retina.js</span> -> retina script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.easing.compatibility.js</span> -> easing compatibility <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.easing.1.3.js</span> -> easing script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.visible.min.js</span> -> visible script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">pond-header.js</span> -> fixed header script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.pace.js</span> -> prelaoder script</li>
+            	<li><span class="accent">jquery.fancybox.pack.js</span> -> fancybox / lightbox script</li>
+            	<li><span class="accent">jquery.owl.carousel.min.js</span> -> owlcarousel script</li>
+            	<li><span class="accent">jquery.isotope.min.js</span> -> masonry script</li>
+            	<li><span class="accent">jquery.bgvideo.min.js</span> -> background video script</li>
+            	<li><span class="accent">jquery.counter.min.js</span> -> script for counters</li>
+            	<li><span class="accent">jquery.fitvids.min.js</span> -> size up/down all videos to parent container</li>
+            	<li><span class="accent">jquery.parallax.min.js</span> -> image parallax background script</li>
+            	<li><span class="accent">jquery.scroll.min.js</span> -> one page scrolling effect</li>
+            	<li><span class="accent">pond-form.js</span> -> checks + sends the contact form</li>
+            	<li><span class="accent">files/jplayer/jquery.jplayer.min.js</span> -> jplayer script (selfhosted audio/video)</li>
+            	<li><span class="accent">files/rs-plugin/js/jquery.themepunch.plugins.min.js</span> -> revolution slider script</li>
+            	<li><span class="accent">files/rs-plugin/js/jquery.themepunch.revolution.min.js</span> -> revolution slider script</li>
+            </ol>
+            	<p>
+            	All js files with <span class="red"><b>!important</b></span> must be included in all html files.<br>
+				Please include the other script only when needed.  This will increase the page speed.
+            	</p>
+				<p>
+				<p class="attention">
+            	<strong>Note:</strong>
+                The script.js <b>must always</b> be the last js file!  This is also the file you can edit if needed.
+            	</p>
+				<p class="attention">
+            	<strong>Note:</strong>
+                All scripts are included at the bottom of the html before closing the body tag.  <br>
+				<b>Exception</b>: jquery library is included at the top of the page below the css files.
+            	</p>
+				<pre>
+...				
+&lt;!-- CSS -->
+
+&lt;!-- JQUERY LIBRARY & MODERNIZR -->
+&lt;script src="files/js/jquery-1.9.1.min.js"></script>
+&lt;!-- JQUERY LIBRARY & MODERNIZR -->
+				</pre>
+          </div>
+          
+          
+          
+          <div id="ressources" class="section">
+           	<h4 class="sectiontitle"><strong>Ressources</strong></h4>
+            <ul>
+                <li>latest jquery version: jQuery from John Resig <br><a href="http://jquery.com/">http://jquery.com/</a></li>
+                <li>jquery.modernizr.min.js: Modernizr from Modernizr <br><a href="http://www.modernizr.com/">http://www.modernizr.com/</a></li>
+                <li>jquery.isotope.min.js: Isotope from David DeSandro <br><a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></li>
+                <li>jquery.easing.1.3.js: Easing from George Smith <br><a href="http://gsgd.co.uk/sandbox/jquery.easIng.php">http://gsgd.co.uk/sandbox/jquery.easIng.php</a></li>
+                <li>jquery.owlcarousel.min.js: Owlcarousel from Bartosz Wojciechowski <br><a href="http://owlgraphic.com/owlcarousel/index.html">http://owlgraphic.com/owlcarousel/index.html</a></li>
+                <li>jquery.jplayer.min.js: jPlayer from Happyworm Ltd <br><a href="http://www.jplayer.org/">http://www.jplayer.org/</a></li>
+                <li>retina.js: Retina script from retinajs.com <br><a href="http://retinajs.com/">http://retinajs.com/</a></li>
+                <li>jquery.fitvids.min.js: Video Fits <br><a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a></li>
+                <li>jquery.visible.min.js: Check the visibility <br><a href="https://github.com/teamdf/jquery-visible/">https://github.com/teamdf/jquery-visible/</a></li>
+                <li>jquery.themepunch.revolution.min.js: Slider script from themepunch.com <br><a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848">revolution slider</a></li>
+            </ul>
+				<p>
+					All other scripts are done by SpabRice and are only allowed to use within this template.
+				</p>
+          </div>
+          
+        </div>        
+        
+	</div>
+
+</div><!-- #page -->    
+</body>
+</html>

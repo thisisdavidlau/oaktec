@@ -1,0 +1,17 @@
+.page-loader-inner .loader-logo-name img {
+	max-height: 200px !important;								/* depending on the logo height */
+	}
+
+.split-mini-content {
+	background-image: url('../img/computer.jpg');
+	background-size: 100%;
+	/*text-align: center;*/
+}
+
+.agency-text {
+	max-width: 50%;
+}
+
+.david {
+	margin-right: 0 !important;
+}
